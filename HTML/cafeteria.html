@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Cafeteria</title>
+
+    <style>
+        /* Apply border-box to all elements */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        /* Main heading */
+        h1 {
+            text-align: center;
+            margin: 30px;
+        }
+
+        /* Menu container */
+        .menu-container {
+            width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            border: 3px solid #333;
+            border-radius: 15px;
+            background-color: white;
+        }
+
+        /* Menu heading */
+        .menu-container > h2 {
+            text-align: center;
+        }
+
+        /* Food cards */
+        .food-card {
+            display: inline-block;
+            width: 250px;
+            height: 350px;
+            margin: 15px;
+            padding: 20px;
+            border: 2px solid #888;
+            border-radius: 10px;
+            background-color: #fafafa;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        /* Food image */
+        .food-card img {
+            width: 120px;
+            height: 100px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        /* Food name */
+        .food-card h2 {
+            margin: 15px 0 10px;
+        }
+
+        /* Description */
+        .food-card p {
+            margin: 10px 0;
+        }
+
+        /* Price */
+        .price {
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #eeeeee;
+        }
+
+        /* Select button */
+        .select-button {
+            width: 120px;
+            height: 40px;
+            margin: 10px;
+            padding: 8px;
+            border: 2px solid #333;
+            border-radius: 6px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+        }
+
+        .select-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>College Cafeteria</h1>
+
+    <div class="menu-container">
+
+        <h2>Today's Special Menu</h2>
+
+        <!-- Food card 1 -->
+        <div class="food-card">
+            <img src="pizza1.jpg" alt="Pizza">
+
+            <h2>Veg Pizza</h2>
+
+            <p>
+                Fresh vegetable pizza with cheese.
+            </p>
+
+            <div class="price">
+                ₹120
+            </div>
+
+            <button class="select-button">
+                Select
+            </button>
+        </div>
+
+        <!-- Food card 2 -->
+        <div class="food-card">
+            <img src="burger2.jpg" alt="Burger">
+
+            <h2>Veg Burger</h2>
+
+            <p>
+                Crispy vegetable burger with fresh salad.
+            </p>
+
+            <div class="price">
+                ₹80
+            </div>
+
+            <button class="select-button">
+                Select
+            </button>
+        </div>
+
+        <!-- Food card 3 -->
+        <div class="food-card">
+            <img src="sandwich3.jpg" alt="Sandwich">
+
+            <h2>Grilled Sandwich</h2>
+
+            <p>
+                Grilled sandwich with vegetables and cheese.
+            </p>
+
+            <div class="price">
+                ₹70
+            </div>
+
+            <button class="select-button">
+                Select
+            </button>
+        </div>
+
+    </div>
+
+</body>
+</html>

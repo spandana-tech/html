@@ -1,0 +1,298 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Event Dashboard</title>
+
+    <style>
+        /* =========================
+           GENERAL STYLING
+        ========================= */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        /* =========================
+           HEADER + BACKGROUND
+        ========================= */
+        header {
+            background: linear-gradient(135deg, #4facfe, #6a5acd);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* =========================
+           PSEUDO-ELEMENT
+        ========================= */
+        header h1::before {
+            content: "🎓 ";
+        }
+
+        header h1::after {
+            content: " 🎉";
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        /* =========================
+           PSEUDO-CLASS: HOVER
+        ========================= */
+        nav a:hover {
+            color: #4facfe;
+        }
+
+        /* =========================
+           GRID
+        ========================= */
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        /* =========================
+           CARD STYLING
+        ========================= */
+        .card {
+            background-color: white;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* =========================
+           PSEUDO-ELEMENT
+        ========================= */
+        .card h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #4facfe;
+            margin-top: 8px;
+        }
+
+        /* =========================
+           FORM STYLING
+        ========================= */
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        /* =========================
+           PSEUDO-CLASS: FOCUS
+        ========================= */
+        input:focus,
+        select:focus {
+            outline: none;
+            border: 1px solid #4facfe;
+            background-color: #eef6ff;
+        }
+
+        /* =========================
+           BUTTON STYLING
+        ========================= */
+        button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.35s;
+        }
+
+        /* =========================
+           PSEUDO-CLASS: HOVER
+        ========================= */
+        button:hover {
+            background-color: #6a5acd;
+            transform: scale(1.05);
+        }
+
+        /* =========================
+           PSEUDO-CLASS: ACTIVE
+        ========================= */
+        button:active {
+            transform: scale(0.95);
+        }
+
+        /* =========================
+           EVENT LIST
+        ========================= */
+        .events {
+            display: grid;
+            gap: 15px;
+        }
+
+        .event {
+            background-color: #eef6ff;
+            border-left: 5px solid #4facfe;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .event h3 {
+            margin-top: 0;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================= */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <h1>College Event Dashboard</h1>
+        <p>Welcome to Technical Fest 2026</p>
+    </header>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Events</a>
+        <a href="#">Register</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- MAIN GRID -->
+    <div class="container">
+
+        <!-- LEFT SECTION -->
+        <div class="card">
+            <h2>Upcoming Events</h2>
+
+            <div class="events">
+
+                <div class="event">
+                    <h3>Coding Contest</h3>
+                    <p>Date: September 10</p>
+                </div>
+
+                <div class="event">
+                    <h3>AI Workshop</h3>
+                    <p>Date: September 11</p>
+                </div>
+
+                <div class="event">
+                    <h3>Web Design</h3>
+                    <p>Date: September 12</p>
+                </div>
+
+                <div class="event">
+                    <h3>Tech Talk</h3>
+                    <p>Date: September 13</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="card">
+            <h2>Event Registration</h2>
+
+            <form>
+
+                <label for="name">Student Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                >
+
+                <label for="event">Select Event</label>
+                <select id="event">
+                    <option>Coding Contest</option>
+                    <option>AI Workshop</option>
+                    <option>Web Design</option>
+                    <option>Tech Talk</option>
+                </select>
+
+                <button type="submit">Register</button>
+
+            </form>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>2026 College Technical Fest</p>
+    </footer>
+
+</body>
+</html>
+```

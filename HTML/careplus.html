@@ -1,0 +1,560 @@
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>careplus hospital</title>
+
+    <style>
+ */
+   GENERAL STYLING */
+   *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+}
+body {
+ font-family:Arial,san-serif;
+background:#f4f8fb;
+color:#222; 
+}
+/*
+NAVIGATION */
+nav{
+    background:#12344d;
+
+    padding:18px  50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.logo{
+     color:white;
+     font-size:24px;
+     font-weight:bold;
+}
+.nav-links {
+     display:flex;
+     gap: 30px;
+     list_style: none;
+}
+
+.nav_links a{
+     color: white;
+     text_decoration :none;
+     /* TRANSITION */
+     transition: color 0.3s ease;
+}
+.nav_links a:hover {
+     co;or: #62d9e8;
+}
+
+.hero {
+     background:
+         linear-gradient(
+              135deg,
+              #1597bb,
+              #2563a6
+          );
+     color: white;
+     text-align: center;
+     padding: 65px 20px;
+     overflow: hidden;
+}
+.hero h1 {
+     font-size: 40px;
+     /* AMIMATION */
+     animation:
+        slideDown 1s ease;
+}
+.hero p {
+     margin-top: 15px;
+     font -size: 18px;
+     animation:
+         fadeIn 2s ease;
+}
+
+/* 
+    MAIN CONTAINER
+   */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+/*
+ GRID
+*/
+.doctor-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 25px;
+}
+/*
+   DOCTOR CARD
+*/
+.doctor-card {
+   background: white;
+   padding: 25px;
+   border-radius: 12px;
+   text-align: center;
+   box-shadow:
+       0 5px 15px rgba(0,0,0,0.08);
+   /* TRANSITION */
+   transition:
+       transform 0.3s ease,
+       box-shadow 0.3s ease;
+}
+/*
+   TRANSFORM */
+.doctor-card:hover {
+    transform:
+        translateY(-10px) scale(1.02);
+    box-shadow:
+        0 12px 25px rgba(0,0,0,0.15);
+}
+/*
+   ICON
+ */
+.doctor-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+    transition:
+        transform 0.3s ease;
+}
+.doctor-card;hover .doctor-icon {
+    transform;
+        scale(1.15) rotate(5deg);
+}
+/*
+    SPEIALIZATION BADGE
+*/
+.badge {
+    disply: inline-block;
+    background: #e0f7fa;
+    color: #087f8c;
+    padding: 5px 12px;
+    border -radus: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/*BUTTON
+*/
+.btn{
+ border:none;
+padding:11px 22px;
+background: #1597bb;
+colour:white;
+border -radus: 6px;
+cursor: pointer;
+margin-top: 12px;
+
+>/TRANSITION*/
+
+transition:
+    background 0.3s ease,
+   transform 02.2s ease;
+}
+.btn:hover{
+background: #087f8c;
+
+    /*TRANSFORM/
+transfORM:
+   SCALE(1.08);
+}
+/*APPOINTMENT FORM
+*/
+.appointment-section{
+  background: white;
+ margin-top: 55px;
+padding:35px;
+border -radus: 12px;
+box-shadow:
+ 0 5px 15px rgba(0,0,0,0.08);
+  }
+/*FORM GRID
+*/
+.form-grid{
+display: grid;
+grid-template-columns:
+    1fr 1fr;
+   gap:20px;
+}
+.form-group{
+display: flex;
+flex-direction:columns:
+}
+gorm-group lable{
+   margin-bottom:7px;
+   font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+
+ padding : 12px;
+
+ border : 1px solid #ccc;
+ 
+ border -radus: 6px;
+
+ font-size:14px;
+
+>/TRANSITION*/
+
+transition:
+
+border - color 0.3s ease
+box-shoodow 0.3s ease/
+}
+
+/*INPUT FOCUS
+*/
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+ outline : none;
+
+border - color :#1597bb;
+
+box-shadow:
+    0 0 8px rgba(21, 151, 187 0.25);
+}
+
+.full-width{
+
+ grid-column:
+    1/-1;
+}
+ /*
+   STATUS COMPONENT
+  */
+.status{
+      margin-top:25px;
+      padding:15px;
+      background:#e8f8ee;
+      border-left:
+          5px solid#18a558;
+      border-radius:6px;
+      /* ANIMATION */
+      animation:
+          pulse 2s infinite;
+  }
+  /* FOOTER 
+*/
+footer{
+   background:#12344d;
+   color:white;
+   text-align:center;
+   padding:20px;
+   margin-top:50px;
+}
+ /* CSS ANIMATIONS
+ */
+   @keyframes slideDown{
+      from{
+         opacity:0;
+         transform:
+            translateY(-50px);
+   }
+}
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+       opacity:1;
+    }
+}
+ @keyframes pulse{
+   0%{
+      transform:scale(1);
+   }
+   50%{  
+       transform:scale(1,0.2);
+   }
+   100%{
+        transform:scale(1);
+   }
+}
+/* 
+  RESPONSIVE DESIGN
+*/
+@media (max-width: 768px){
+     .doctor-grid{
+         grid-template-columns:
+             1fr;
+}
+nav{
+padding:15px 20px;
+}
+.nav-links{
+    gap:10px;
+}
+.hero h1{
+     font-size:30px;
+}
+}
+</style>
+</head>
+<body>
+     <!--
+         NAVIGATION
+     -->
+     <nav>
+         <div class="logo">
+             CarePlus Hospital 
+         </div>
+        <ul class="nav-links">
+            <li>
+   		<a href="#">Home</a>
+	    </li>
+	    <li>
+    		<a href="#doctors">Doctors</a>
+	    </li>
+     	    <li>
+		<a href="#appointment">Appointment</a>
+	    </li>
+ 	    <li>
+		<a href="#contact">Contact</a>
+    	    </li>
+	</ul>
+     </nav>
+     <!-- 
+          HERO
+     -->
+     <section class="hero">
+        <h1>
+            Your Health, Our Priority
+        </h1>
+     	<p>
+           Find a doctor and book your appointment easily.
+	</p>
+      </section>
+      <!-- ===============================================================
+            DOCTORS
+      ==================================================================-->
+      <div class="container"
+           id="doctors">
+           <h2 class=section-title">
+               Our Doctors
+           </h2>
+           <!-- CSS GRID -->
+	   <div class="doctor-grid">  
+                <!-- Doctor1 -->
+           <div class="doctor-card">
+		<div class="doctor-icon">
+			👨‍⚕️
+		</div>
+		<h3>
+		    Dr.Arun Kumar
+		</h3>
+		<span class="badge">
+		    Cardiologist
+		</span>
+		<p>
+		   12 Years Experience
+		</p>
+		<p>
+		   Available: 9 AM- 1PM
+		</p>
+		<button class="btn">
+			View Profile
+		</button>
+            </div>
+	   <!-- Doctor2 -->
+           <div class="doctor-card">
+		<div class="doctor-icon">
+			👨‍⚕️
+		</div>
+		<h3>
+		    Dr.Priya Sharma
+		</h3>
+		<span class="badge">
+		    Dermatologist
+		</span>
+		<p>
+		   8 Years Experience
+		</p>
+		<p>
+		   Available: 10 AM- 2PM
+		</p>
+		<button class="btn">
+			View Profile
+		</button>
+	</div>
+	<!-- Doctor3 -->
+           <div class="doctor-card">
+		<div class="doctor-icon">
+			👨‍⚕️
+		</div>
+		<h3>
+		    Dr.Rahul Mehta
+		</h3>
+		<span class="badge">
+		    Pediatrician
+		</span>
+		<p>
+		   10 Years Experience
+		</p>
+		<p>
+		   Available: 2 AM-  6 PM
+		</p>
+		<button class="btn">
+			View Profile
+		</button>
+	   </div>
+        </div>
+        <!--
+            APPOINTMENT FORM
+        -->
+        <section 
+	    class="appointment-section"
+	    id="appointment">
+	    <h2>
+		Book an Appointment 
+	    </h2>
+	   <form>
+		<div class="form-grid">
+		     <div class="form-group">
+			<label>
+			     Patient Name
+			</label>
+			<input
+			    type="text"
+			    placeholder="Enter patient name">
+		</div>
+		     <div class="form-group">
+			<label>
+			     Phone Number
+			</label>
+			<input
+			    type="tel"
+			    placeholder="Enter phone number">
+		</div>
+		     <div class="form-group">
+			<label>
+			     Select Doctor
+			</label>
+			<select>
+			    <option>
+				Select Doctor
+			    </option>
+			    <option>
+				Dr. Arun Kumar
+			    </option>
+			    <option>
+				Dr. Priya Sharma
+			    </option>
+			    <option>
+				Dr. Rahul Mehta
+			    </option>
+			</select>
+		     </div>
+  		    <div class="form-group">
+			<label>
+			     Department
+			</label>
+			<select>
+			    <option>
+				Select Department
+			    </option>
+			    <option>
+				Cardiology
+			    </option>
+			    <option>
+				Dermatology
+			    </option>
+			    <option>
+				Pediatrics
+			    </option>
+			</select>
+		     </div>
+		     <div class="form-group">
+			<label>
+			     Appointment Date
+			</label>
+          
+         		<input
+				type="date">
+			</div>
+			<div class="form-group">
+			<label>
+			     Appointment Time
+			</label>
+          
+         		<input
+				type="time">
+			</div>
+			<div class="form-group full-width">
+			<label>
+			     Additional Message
+			</label>
+          
+         		<textarea
+			    rows="4"
+			    placeholder="Enter your message">
+			   </textarea>
+			</div>
+			<div class="form-group full-width">
+			   <button
+				type="submit"
+				class="btn">
+				Book Appointment
+			</button>
+			</div>
+		     </div>
+		</form>
+ 		<!-- UI COMPONENT -->
+		<div class="status">
+		    ✓ Online appointment booking is available.
+		</div>
+		</section>
+	    </section>
+         </div>
+
+        <!--
+            FOOTER
+-->
+<footer id="contact">
+	<p>
+          ©2026 careplus hospital
+          Healthcare appointment portal
+<p>
+</footer>
+
+<body>
+</html>
+			
+      		
+      		
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+ 
+    
+
+
+
+
